@@ -1,4 +1,4 @@
-package edu.msudenver.cs3013.movielist
+package com.example.movielist
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle

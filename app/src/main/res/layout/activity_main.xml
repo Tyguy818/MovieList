@@ -5,23 +5,55 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Elliott's Booklist"
-        android:layout_gravity="center" />
-    <Button
-        android:id="@+id/forward_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ADD MOVIE"
-        android:textSize="15sp"
+        android:text="MovieList"
         android:layout_gravity="center"
-        android:onClick="startSecond"/>
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/forward_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD MOVIE"
+            android:textSize="25dp"
+            android:onClick="startSecond"
+            android:padding="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:cornerRadius="0dp"
+            android:backgroundTint="@color/dark_gray"
+            android:textColor="@android:color/white"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SAVE LIST"
+            android:textSize="25dp"
+            android:onClick="saveList"
+            android:padding="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:cornerRadius="0dp"
+            android:backgroundTint="@color/dark_gray"
+            android:textColor="@android:color/white"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        />
 </LinearLayout>

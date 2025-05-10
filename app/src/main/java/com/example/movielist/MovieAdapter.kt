@@ -1,4 +1,4 @@
-package edu.msudenver.cs3013.movielist
+package com.example.movielist
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 
 class MovieAdapter // Constructor
-    (private val MovieList: MutableList<Movie>) :
+    (private val movieList: MutableList<Movie>) :
     RecyclerView.Adapter<MovieAdapter.MovieViewHolder?>() {
     // added to enable swipe delete
     val swipeToDeleteCallback = SwipeToDeleteCallback()
@@ -37,7 +37,7 @@ class MovieAdapter // Constructor
 
     // binds view holder to one particular MovieList item
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
-        val Movie = MovieList.get(position)
+        val Movie = movieList.get(position)
         holder.titleTextView.setText(Movie.title)
         holder.yearTextView.setText(Movie.year)
         holder.genreTextView.setText(Movie.genre)
@@ -45,10 +45,10 @@ class MovieAdapter // Constructor
     }
 
     override fun getItemCount(): Int {
-        return MovieList.size
+        return movieList.size
     }
     fun removeItem(position: Int) {
-        MovieList.removeAt(position)
+        movieList.removeAt(position)
         // use parent class RecyclerView.ViewHolder function to notify of change
         notifyItemRemoved(position)
     }
