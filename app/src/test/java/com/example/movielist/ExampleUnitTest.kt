@@ -1,4 +1,4 @@
-package edu.msudenver.cs3013.movielist
+package com.example.movielist
 
 import org.junit.Test
 

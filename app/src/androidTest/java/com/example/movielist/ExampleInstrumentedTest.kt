@@ -1,4 +1,4 @@
-package edu.msudenver.cs3013.movielist
+package edu.msudenver.cs3013
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
