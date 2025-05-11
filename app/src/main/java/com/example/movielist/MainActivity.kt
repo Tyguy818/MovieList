@@ -143,7 +143,6 @@ class MainActivity : AppCompatActivity() {
                 movieList.add(Movie(parts[0], parts[1], parts[2], parts[3]))
             }
             myReader.close()
-            movieList.sortByDescending { it?.rating }
             movieAdapter.notifyDataSetChanged()
         } catch (e: IOException) {
             Log.d("READ", "HIT EXCEP >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" + e)
